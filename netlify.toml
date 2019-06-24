@@ -13,9 +13,26 @@
   
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/netlify-dev-plugin#project-detection
-  #[dev] 
+  [dev] 
   #  command = "yarn start" # Command to start your dev server
   #  port = 3001 # Port that the dev server will be listening on
   #  publish = "dist" # Folder with the static content for _redirect file
+
+ [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors https://www.facebook.com"
+
+    # Multi-key header rules are expressed with multi-line strings.
+	cache-control = '''
+	max-age=0,
+	no-cache,
+	no-store,
+	must-revalidate'''
+
+    # Basic-Auth allows you to password protect your whole site. 
+    # This feature may not be available on all plans.
+    Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
+
   
   ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 

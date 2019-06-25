@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d0b3228-91bb-4ce2-a989-69654f788a10/deploy-status)](https://app.netlify.com/sites/objective-northcutt-c16601/deploys)
